@@ -1,19 +1,8 @@
 //Поиск необходимых спанов
-const findSpansForReplacement = (element) => {
-    let result = [];
-    let child = element.children;
-  
-    for (let i = 0; i < child.length; i++) {
-
-        if (child[i].matches('span') && child[i].closest('.user-list') !== null) {
-            result.push(child[i]);
-        } 
-        else if (child[i].children.length !== 0) {
-            result.push(findSpansForReplacement(child[i]));
-        }
-    }
-    return result.flat(Infinity);
-};
+const findSpansForReplacement = () => {
+    return Array.from(document.getElementsByTagName("span"))
+        .filter(span => span.closest('.user-list') !== null);
+} 
 
 //Подсчет всех тэгов
 const countOfEachTag = (element, obj) => {
