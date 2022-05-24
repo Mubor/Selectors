@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <section class="wrapper">
+        <div class="info">
+            <div class="info__item">
+                <div class="info__img"><img src="imgs/life.png" alt="life count"></div>
+                <div class="info__text" id="life-count">3</div>
+            </div>
+            <div class="info__item">
+                <div class="info__img"><img src="imgs/bomb.png" alt="bomb count"></div>
+                <div class="info__text" id="bomb-count">-</div>
+            </div>
+            <div class="info__item">
+                <div class="info__img"><img src="imgs/ok.png" alt="opened cells"></div>
+                <div class="info__text" id="opened-count">-</div>
+            </div>
+        </div>
+        <table id="game-field" class="game"></table>
+    </section>
+        <div role="dialog" class="app-dialog">
+          <div class="app-dialog__overlay">
+            <div class="app-dialog__body">
+                <h2 id="message"></h2>
+                <div class="app-dialog__container" id="settings">
+                    <button class="app-dialog__button" id="easy">Easy</button>
+                    <button class="app-dialog__button" id="norm">Normal</button>
+                    <button class="app-dialog__button" id="hard">Hard</button>
+                </div>
+                <div class="app-dialog__container" id="endgame">
+                    <button class="app-dialog__button" id="restart">Restart</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="src/handlers.js"></script>
+      <script src="src/generate.js"></script>
+      <script src="src/UI.js"></script>
+      <script src="src/index.js"></script>
+</body>
+</html>
