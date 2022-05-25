@@ -7,7 +7,7 @@ const createCell = (celltype, sources) => {
     const srcBackImg = celltype === 0 ? sources.clear : sources.bomb;
     
     const inner = `
-    <div class="game__front"><img src="${sources.front}" alt="frontImg"></div>
+    <div class="game__front"></div>
     <div class="game__back"><img src="${srcBackImg}" alt="backImg"></div>`;
     
     td.className = `game__cell`;

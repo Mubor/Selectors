@@ -2,11 +2,11 @@ const UI = {
     updateData(data) {
         const life = document.getElementById('life-count');
         const bomb = document.getElementById('bomb-count');
-        const open = document.getElementById('opened-count');
+        const closed = document.getElementById('closed-count');
 
         life.innerHTML = data.life;
         bomb.innerHTML = data.bomb;
-        open.innerHTML = data.open;
+        closed.innerHTML = data.closed;
     },
 
     openWindow(message, settingsMode = true) {
@@ -29,9 +29,9 @@ const UI = {
     },
     
     clear () {
-        for (const key in data) {
-            data[key] = 0;
-        }
+        data.bomb = 0;
+        data.life = 0;
+        data.closed = 25;
         document.getElementById('game-field').innerHTML = '';
     }
 }

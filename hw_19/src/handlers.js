@@ -19,17 +19,15 @@ const handler = {
         if (isBomb(back)) {
             data.bomb--;
             data.life--;
-            data.open++;
-        } else {
-            data.open++
-        }
-
+        } 
+    
+        data.closed--;
         UI.updateData(data);
 
         //checking results
         if (data.life === 0) {
             UI.openWindow('You lose(', false);
-        }else if (data.open + data.bomb === 25) {
+        }else if (data.closed === data.bomb) {
             UI.openWindow('You win!)', false);
         }
     },

@@ -69,6 +69,7 @@ h2 {
 
 .game__back {
     transform: rotateY(180deg);
+    background-color: #fff;
 }
 
 .app-dialog {

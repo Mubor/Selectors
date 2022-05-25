@@ -8,12 +8,11 @@ const start = () => {
 const sources = {
     bomb: 'imgs/bomb.png',
     clear: 'imgs/ok.png',
-    front: 'imgs/question.png',
 }
 const data = {
     bomb: 0, 
     life: 0, 
-    open: 0
+    closed: 25
 }
 
 document.getElementById('game-field').addEventListener('click', handler.cellClick);
