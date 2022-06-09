@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <form name="autorization" novalidate>
+        <label for="email">
+            <h3>Your email</h3>
+            <input type="email" name="email" id="email" placeholder="Enter email" required>
+            <span role="message"></span>
+        </label>
+        <label for="password">
+            <h3>Password</h3>
+            <input type="text" name="password" id="password" placeholder="Enter password" minlength="9" maxlength="25" required>
+            <span role="message"></span>
+        </label>
+        <label for="passwordConfirm">
+            <h3>Confirm password</h3>
+            <input type="text" name="passwordConfirm" id="passwordConfirm" placeholder="Confirm password" minlength="9" maxlength="25" required>
+            <span role="message"></span>
+        </label>
+        <label for="check" data-inline>
+            <span>I agree</span>
+            <input type="checkbox" name="agreement" id="check" checked>
+            <span role="message"></span>
+        </label>
+        <label>
+            <input type="submit" name="button" value="Submit">
+        </label>
+    </form>
+    <output></output>
+    <script src="src/index.js"></script>
+</body>
+</html>
